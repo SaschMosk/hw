@@ -5,16 +5,23 @@ class Animals:
   babys = 0 #количество потомков
   size = 0 #условный размер животного, в дециметрах
   weight = 0 #вес животного в кг
+  def init_size(self):
+    s = input('Введите размер животного, в дм:')
+    self.size += int(s)
+    return self.size
+  def init_weight(self):
+    w = input('Введите вес животного, в кг:')
+    self.weight += int(w)
   def eat(self):
     float(self.age)
     self.age += 0.05
-    weight += 0.2
-    print("Вырос на ", self.age, ' лет')
+    self.weight += 0.2
+    print('Теперь возраст: ', self.age)
   def sleep(self):
     float(self.age)
     self.age += 0.07
-    size += 0.1
-    print("Вырос на ", self.age, ' лет')
+    self.size += 0.1
+    print('Теперь возраст:', self.age)
 class Birds (Animals):
   Legs = 2
   Wings = True
@@ -36,33 +43,33 @@ class Mammals (Animals):
     self.babys += 1
 class Cow(Mammals):
   color = 'black&white'
-  def hear_cow(self):
-    print("Muuuu")
+  def hear(self):
+    return "Muuuu"
   def give_milk(self):
     print("Получено random.int(20, 40) литров молока")
 class Goat(Mammals):
   color = 'gray'
   def hear_goat(self):
-    print('Meeee')
+    return 'Meeee'
 class Sheep(Mammals):
   color = 'white'
-  def hear_sheep(self):
-    print('Beeee')
+  def hear(self):
+    return 'Beeee'
 class Pig(Mammals):
   color = 'pink'
-  def hear_pig(self):
-    print('Chryu')
+  def hear(self):
+    return 'Chryu'
 class Duck(Birds):
   color = 'green'
-  def hear_Duck(self):
-    print('Krya')
+  def hear(self):
+    return 'Krya'
   def swim_in_pond(self):
     print("Утка плавает в пруду...")
 class Сhicken(Birds):
   color = 'brown'
-  def hear_chiken(self):
-    print('Kud-Kudach')
+  def hear(self):
+    return'Kud-Kudach'
 class Goose(Birds):
   color = 'gray&blu'
-  def hear_goose(self):
-    print('Ga-ga-ga')
+  def hear(self):
+    return 'Ga-ga-ga'
